@@ -54,7 +54,9 @@ def classify(sents: list[str], clf) -> list[dict]:
 def render_highlighted(rows: list[dict], threshold: float) -> str:
     spans = []
     for r in rows:
-        color = LABELS[r["label"]] if r["confidence"] >= threshold else "#e0e0e0"
+        color = (
+            LABELS[r["label"]]["color"] if r["confidence"] >= threshold else "#e0e0e0"
+        )
         spans.append(
             f'<span style="background:{color};padding:2px 4px;border-radius:3px;'
             f'margin:1px;display:inline" title="{r["label"]} ({r["confidence"]:.0%})">'
