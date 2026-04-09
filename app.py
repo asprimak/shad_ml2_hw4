@@ -9,6 +9,7 @@ LABELS = {
     "NFS": {"color": "#a8d5ba", "description": "Non-factual Sentence"},
     "UFS": {"color": "#f7dc6f", "description": "Unimportant Factual Sentence"},
     "CFS": {"color": "#f1948a", "description": "Check-worthy Factual Sentence"},
+    "   ": {"color": "#e0e0e0", "description": "None (model's confidence < 0.7"},
 }
 EXAMPLES_CSV = "examples.csv"
 
